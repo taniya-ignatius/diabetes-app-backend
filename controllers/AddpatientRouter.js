@@ -10,6 +10,9 @@ router.post("/add",async(req,res)=>{
         status:"success"
     })
 })
-
+router.get("/view",async(req,res)=>{
+    let data=await addpatientModel.find()
+    res.json(data)
+})
 
 module.exports=router
